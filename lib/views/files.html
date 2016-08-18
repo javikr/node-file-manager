@@ -39,6 +39,23 @@
     </div>
   </div>
 
+  <div class="modal fade" id="addSpotifyDownloadModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Add Spotify URI</h4>
+        </div>
+        <div class="modal-body">
+          <label>Spotify URI <input class="input-xlarge" ng-model="FM.newSpotifyUri" /></label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="FM.addSpotifyDownload(FM.newSpotifyUri)">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="uploadFileModal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -109,6 +126,7 @@
       <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('rename')" data-toggle="modal" data-target="#renameModal"><span class="glyphicon glyphicon-font"></span> Rename</button>
       <button type="button" class="btn btn-default pull-right" ng-disabled="FM.btnDisabled('create_folder')" data-toggle="modal" data-target="#createFolderModal"><span class="glyphicon glyphicon-plus-sign"></span> New Folder</button>
       <button type="button" class="btn btn-default pull-right" ng-disabled="FM.btnDisabled('upload_file')" data-toggle="modal" data-target="#uploadFileModal"><span class="glyphicon glyphicon-upload"></span> Upload</button>
+      <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#addSpotifyDownloadModal"><span class="glyphicon glyphicon-plus-sign"></span> New Spotify Download</button>
     </div>
 
     <ol class="breadcrumb">
