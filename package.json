@@ -25,7 +25,7 @@
     "koa-static": "^1.4.9",
     "optimist": "^0.6.1",
     "tracer": "^0.8.0",
-    "userid": "lastest"
+    "userid": "^0.2.0"
   },
   "repository": {
     "type": "git",
