@@ -110,6 +110,23 @@
     </div>
   </div>
 
+  <div class="modal fade" id="zipModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Rename</h4>
+        </div>
+        <div class="modal-body">
+          <label>File Name (without extension) <input class="input-xlarge" ng-model="FM.zipName" placeholder={{FM.selection[0].name}} /></label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="FM.zipFile(FM.zipName)">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <nav class="navbar navbar-default navbar-static-top" style="background-color: #1ED760">
     <div class="container">
       <div class="navbar-header">
@@ -124,6 +141,7 @@
       <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('delete')" ng-click="FM.delete()"><span class="glyphicon glyphicon-remove"></span> Delete</button>
       <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('move')" data-toggle="modal" data-target="#moveModal"><span class="glyphicon glyphicon-random"></span> Move</button>
       <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('rename')" data-toggle="modal" data-target="#renameModal"><span class="glyphicon glyphicon-font"></span> Rename</button>
+      <button type="button" class="btn btn-default" ng-disabled="FM.btnDisabled('zip')" data-toggle="modal" data-target="#zipModal"><span class="glyphicon glyphicon-compressed"></span> Compress</button>
       <button type="button" class="btn btn-default pull-right" ng-disabled="FM.btnDisabled('create_folder')" data-toggle="modal" data-target="#createFolderModal"><span class="glyphicon glyphicon-plus-sign"></span> New Folder</button>
       <button type="button" class="btn btn-default pull-right" ng-disabled="FM.btnDisabled('upload_file')" data-toggle="modal" data-target="#uploadFileModal"><span class="glyphicon glyphicon-upload"></span> Upload</button>
       <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#addSpotifyDownloadModal"><span class="glyphicon glyphicon-plus-sign"></span> New Spotify Download</button>

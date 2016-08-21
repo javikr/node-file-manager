@@ -26,7 +26,9 @@
     "optimist": "^0.6.1",
     "tracer": "^0.8.0",
     "userid": "^0.2.0",
-    "koa-basic-auth": "^1.1.2"
+    "koa-basic-auth": "^1.1.2",
+    "easy-zip": "^0.0.4",
+    "zip-folder": "^1.0.0"
   },
   "repository": {
     "type": "git",
